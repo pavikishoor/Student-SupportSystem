@@ -1,0 +1,254 @@
+<%-- 
+    Document   : FindDonorResult
+    Created on : 1 Oct, 2019, 3:35:58 PM
+    Author     : PAVITHRAYANI
+--%>
+
+<html>
+   <head>
+      <title>TODO supply a title</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+      <script>
+         body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+         body {font-size:16px;}
+         .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+         .w3-half img:hover{opacity:1}
+         // Script to open and close sidebar
+         function w3_open() {
+           document.getElementById("mySidebar").style.display = "block";
+           document.getElementById("myOverlay").style.display = "block";
+         }
+          
+         function w3_close() {
+           document.getElementById("mySidebar").style.display = "none";
+           document.getElementById("myOverlay").style.display = "none";
+         }
+         
+         // Modal Image Gallery
+         function onClick(element) {
+           document.getElementById("img01").src = element.src;
+           document.getElementById("modal01").style.display = "block";
+           var captionText = document.getElementById("caption");
+           captionText.innerHTML = element.alt;
+         }
+      </script>
+      <style>
+         .w3-bar .w3-button{white-space:normal}
+         .w3-bar-block .w3-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+      </style>
+   </head>
+   <body>
+      <div class="w3-top">
+         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+               <a href="#designers" class="w3-bar-item w3-button">About</a>
+               <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+               <a href="Register.jsp" class="w3-bar-item w3-button">Register</a>
+               <a href="Login.jsp" class="w3-bar-item w3-button">Login</a>
+            </div>
+         </div>
+      </div>
+      <!-- Sidebar/menu -->
+      <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+         <br>
+         <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+         <div class="w3-container">
+            <h1 class="w3-padding-64"><b>Stu HelpLine</b></h1>
+         </div>
+         <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Images</a> 
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">How to Apply</a> 
+            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a> 
+            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Achievements</a> 
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+            <a href="BloodRequest.jsp" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Request</a>
+         </div>
+      </nav>
+      <!-- Top menu on small screens -->
+      <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+         <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+         <span>Quality Education</span>
+      </header>
+      <!-- Overlay effect when opening sidebar on small screens -->
+      <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+      <!-- !PAGE CONTENT! -->
+      <div class="w3-main" style="margin-left:340px;margin-right:40px">
+         <!-- Header -->
+         <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>Anti Ragging Zone</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Image</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+         </div>
+         <!-- Photo grid (modal) -->
+         <div class="w3-row-padding">
+            <div class="w3-half">
+               <img src="w3images/Antiragging.jpeg" style="width:100%; height: 383px;" onclick="onClick(this)" alt="Concrete meets bricks"><br><br><br>
+               <img src="w3images/Student4.PNG" style="width:100%; height: 345px;" onclick="onClick(this)" alt="Light, white and tight scandinavian design"><br><br><br>
+               <img src="w3images/Student5.PNG" style="width:100% ;  height: 445px;" onclick="onClick(this)" alt="White walls with designer chairs"><br><br><br>
+            </div>
+            <div class="w3-half">
+               <img src="w3images/Student1.jpg" style="width:100%; height: 383px;" onclick="onClick(this)" alt="Windows for the atrium"><br><br><br>
+               <img src="w3images/Student2.jpg" style="width:100%; height: 345px;" onclick="onClick(this)" alt="Bedroom and office in one space"><br><br><br>
+               <img src="w3images/Student6.PNG" style="width:100%;  height: 445px;" onclick="onClick(this)" alt="Scandinavian design"><br><br><br>
+            </div>
+         </div>
+         <!-- Modal for full size images on click-->
+         <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+               <img id="img01" class="w3-image">
+               <p id="caption"></p>
+            </div>
+         </div>
+         <!-- Services -->
+         <div class="w3-container" id="services" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>How To Apply.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Education is a human right with immense power to transform</p>
+            <p> <br>
+                1.Register with basic details including AADHAR number.<br><br>
+                2.Login for posting issues.<br><br>
+                3.Leave Grievance and submit for further actions.<br>
+ </p>
+         </div>
+         <!-- Designers -->
+         <div class="w3-container" id="designers" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>About</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>The best team in the world.</p>
+            <p>
+               The Online Student's Grievance Redressal System is a new initiative taken by us
+
+that facilitates students / complainants to lodge his or her grievance,
+
+send reminder and view status on action taken with regard to their grievance(s).
+
+ 
+
+The basic aim of the Application is to ensure the transparency in admissions,
+
+prevent unfair practices in institutions, issues related to ragging, academic and house-keeping issues
+
+and to provide a mechanism for redressal of their grievances.
+
+ 
+
+
+<br><br>The system also facilitates the universities to search and browse grievances lodged
+
+against their university and post action taken against the complaints on the portal
+
+as well as contact the complainant directly through the Application.
+<br><br>The system also facilitates the universities to search and browse grievances lodged against their university and post action taken against the complaints on the portal as well as contact the complainant directly through e-mail, phone or by post.
+
+ 
+            </p>
+            <p><b>Founder</b>:</p>
+         </div>
+         <!-- The Team -->
+         <div class="w3-row-padding w3-grayscale">
+            <div class="w3-col m4 w3-margin-bottom">
+               <div class="w3-light-grey">
+                  <img src="w3images/Pavi.jpg" alt="John" style="width:100%; height:406px">
+                  <div class="w3-container">
+                     <h3>Pavithrayani </h3>
+                     <p class="w3-opacity">CEO</p>
+                     <p> We've created a platform uniting Students, University, and Grievance Redressal committe to help students to live life better every day.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+               <div class="w3-light-grey">
+                  <img src="w3images/Siva.png" alt="Jane" style="width:100%; height:406px">
+                  <div class="w3-container">
+                     <h3>Siva Rama Krishnan</h3>
+                     <p class="w3-opacity">Founder</p>
+                     <p>“Education is a Powerfull weapon”</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+               <div class="w3-light-grey">
+                  <img src="w3images/Gopi.jpg" alt="Mike" style="width:100%; height:406px" >
+                  <div class="w3-container">
+                     <h3>Gopika</h3>
+                     <p class="w3-opacity">Team Lead</p>
+                     <p>“Donate your blood for a reason, let the reason to be life”</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Packages / Pricing Tables -->
+         <div class="w3-container" id="packages" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Achivements</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Confidentiality is a essence of being trusted.</p>
+         </div>
+         <div class="w3-row-padding">
+            <div class="w3-half w3-margin-bottom">
+               <ul class="w3-ul w3-light-grey w3-center">
+                  <li class="w3-dark-grey w3-xlarge w3-padding-32">Status</li>
+                  <li class="w3-padding-16">Posted - Complaints</li>
+                  <li class="w3-padding-16">1000</li>
+                  <li class="w3-padding-16">Pending - Complaints</li>
+                  <li class="w3-padding-16">0</li>
+                  <li class="w3-padding-16">
+                     <span class="w3-opacity">Need Help Register Here...</span>
+                  </li>
+                  <li class="w3-light-grey w3-padding-24">
+                     <button class="w3-button w3-white w3-padding-large w3-hover-black">Register</button>
+                  </li>
+               </ul>
+            </div>
+            <div class="w3-half">
+               <ul class="w3-ul w3-light-grey w3-center">
+                  <li class="w3-red w3-xlarge w3-padding-32">Committee Members</li>
+                  <li class="w3-padding-16">Naveen B</li>
+                  <li class="w3-padding-16">Prithisha K</li>
+                  <li class="w3-padding-16">Manigandan</li>
+                  <li class="w3-padding-16">Bharkavi</li>
+                  
+                  <li class="w3-padding-16">
+                     <span class="w3-opacity"> To View Complaints Register Here....</span>
+                  </li>
+                  <li class="w3-light-grey w3-padding-24">
+                     <button class="w3-button w3-red w3-padding-large w3-hover-black">Register</button>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- Contact -->
+         <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Emergency ? Contact.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Emergency ? Fill out the form and fill me in with the details :) We love Helping  people!</p>
+            <form action="/action_page.php" target="_blank">
+               <div class="w3-section">
+                  <label>Name</label>
+                  <input class="w3-input w3-border" type="text" name="Name" required>
+               </div>
+               <div class="w3-section">
+                  <label>Email</label>
+                  <input class="w3-input w3-border" type="text" name="Email" required>
+               </div>
+               <div class="w3-section">
+                  <label>Message</label>
+                  <input class="w3-input w3-border" type="text" name="Message" required>
+               </div>
+               <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+            </form>
+         </div>
+         <!-- End page content -->
+      </div>
+      <!-- W3.CSS Container -->
+      <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+         <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
+      </div>
+   </body>
+</html>
